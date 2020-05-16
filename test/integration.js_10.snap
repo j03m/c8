@@ -3,25 +3,6 @@
 exports[`c8 /* c8 ignore next */ ignores lines with special comment 1`] = `
 ",covered
 covered
---------------------------|---------|----------|---------|---------|--------------------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
---------------------------|---------|----------|---------|---------|--------------------------------
-All files                 |   76.09 |    62.96 |   67.65 |   76.09 |                                
- bin                      |   78.85 |       60 |   66.67 |   78.85 |                                
-  c8.js                   |   78.85 |       60 |   66.67 |   78.85 | 22,27-29,32-33,41-43,50-51     
- lib                      |      81 |     54.9 |   83.33 |      81 |                                
-  is-cjs-esm-bridge.js    |      90 |       25 |     100 |      90 | 9                              
-  parse-args.js           |    95.8 |    45.45 |     100 |    95.8 | 97-98,106-107,120-121          
-  report.js               |   76.14 |    64.52 |   83.33 |   76.14 | ...152,158-189,220-221,249-251 
-  source-map-from-file.js |      44 |      100 |       0 |      44 | 10-23                          
- lib/commands             |   43.18 |       75 |   16.67 |   43.18 |                                
-  check-coverage.js       |   21.31 |      100 |       0 |   21.31 | 9-11,14-27,30-44,46-61         
-  report.js               |   92.59 |    71.43 |      50 |   92.59 | 9-10                           
- test/fixtures            |   86.21 |    91.67 |   71.43 |   86.21 |                                
-  async.js                |     100 |      100 |     100 |     100 |                                
-  c8-ignore-next.js       |   90.91 |      100 |     100 |   90.91 | 21-22                          
-  normal.js               |      75 |    66.67 |   33.33 |      75 | 14-16,18-20                    
---------------------------|---------|----------|---------|---------|--------------------------------
 ,"
 `;
 
@@ -29,16 +10,6 @@ exports[`c8 --all reports coverage for unloaded js files as 0 for line, branch a
 ",zero
 positive
 negative
---------------|---------|----------|---------|---------|-------------------
-File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------|---------|----------|---------|---------|-------------------
-All files     |   64.29 |    66.67 |      50 |   64.29 |                   
- vanilla      |   78.26 |       75 |     100 |   78.26 |                   
-  loaded.js   |   73.68 |    71.43 |     100 |   73.68 | 4-5,16-18         
-  main.js     |     100 |      100 |     100 |     100 |                   
- vanilla/dir  |       0 |        0 |       0 |       0 |                   
-  unloaded.js |       0 |        0 |       0 |       0 | 1-5               
---------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -46,16 +17,6 @@ exports[`c8 --all reports coverage for unloaded transpiled ts files as 0 for lin
 ",zero
 positive
 negative
------------------|---------|----------|---------|---------|-------------------
-File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------------|---------|----------|---------|---------|-------------------
-All files        |   64.29 |    66.67 |      50 |   64.29 |                   
- ts-compiled     |   78.26 |       75 |     100 |   78.26 |                   
-  loaded.ts      |   73.68 |    71.43 |     100 |   73.68 | 4-5,16-18         
-  main.ts        |     100 |      100 |     100 |     100 |                   
- ts-compiled/dir |       0 |        0 |       0 |       0 |                   
-  unloaded.ts    |       0 |        0 |       0 |       0 | 1-5               
------------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -63,16 +24,6 @@ exports[`c8 --all reports coverage for unloaded ts files as 0 for line, branch a
 ",zero
 positive
 negative
---------------|---------|----------|---------|---------|-------------------
-File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------|---------|----------|---------|---------|-------------------
-All files     |   78.57 |       75 |      50 |   78.57 |                   
- ts-only      |   95.65 |    85.71 |     100 |   95.65 |                   
-  loaded.ts   |   94.74 |    83.33 |     100 |   94.74 | 9                 
-  main.ts     |     100 |      100 |     100 |     100 |                   
- ts-only/dir  |       0 |        0 |       0 |       0 |                   
-  unloaded.ts |       0 |        0 |       0 |       0 | 1-5               
---------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -80,26 +31,23 @@ exports[`c8 --all should allow for --all to be used in conjunction with --check-
 ",zero
 positive
 negative
---------------|---------|----------|---------|---------|-------------------
-File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------|---------|----------|---------|---------|-------------------
-All files     |   64.29 |    66.67 |      50 |   64.29 |                   
- vanilla      |   78.26 |       75 |     100 |   78.26 |                   
-  loaded.js   |   73.68 |    71.43 |     100 |   73.68 | 4-5,16-18         
-  main.js     |     100 |      100 |     100 |     100 |                   
- vanilla/dir  |       0 |        0 |       0 |       0 |                   
-  unloaded.js |       0 |        0 |       0 |       0 | 1-5               
---------------|---------|----------|---------|---------|-------------------
-,ERROR: Coverage for lines (64.29%) does not meet global threshold (100%)
-ERROR: Coverage for branches (66.67%) does not meet global threshold (82%)
-ERROR: Coverage for statements (64.29%) does not meet global threshold (96%)
-"
+,"
 `;
 
 exports[`c8 --all should allow for --all to be used with the check-coverage command (2 invocations) 1`] = `
-",,ERROR: Coverage for lines (64.29%) does not meet global threshold (90%)
-ERROR: Coverage for branches (66.67%) does not meet global threshold (82%)
-ERROR: Coverage for statements (64.29%) does not meet global threshold (96%)
+",,(node:17653) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'tmp/all-check-coverage-as-command'
+    at fs.readdirSync (fs.js:861:3)
+    at Report._loadReports (/Users/jmordetsky/c8/lib/report.js:211:19)
+    at Report._getMergedProcessCov (/Users/jmordetsky/c8/lib/report.js:148:37)
+    at Report.getCoverageMapFromAllCoverageFiles (/Users/jmordetsky/c8/lib/report.js:66:31)
+    at Object.exports.checkCoverages (/Users/jmordetsky/c8/lib/commands/check-coverage.js:36:28)
+    at Object.exports.handler (/Users/jmordetsky/c8/lib/commands/check-coverage.js:26:11)
+    at Object.runCommand (/Users/jmordetsky/c8/node_modules/yargs/lib/command.js:240:40)
+    at Object.parseArgs [as _parseArgs] (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:1154:41)
+    at Object.parse (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:627:25)
+    at run (/Users/jmordetsky/c8/bin/c8.js:22:29)
+(node:17653) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:17653) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 "
 `;
 
@@ -178,7 +126,22 @@ ERROR: Coverage for statements (75%) does not meet threshold (96%) for test/fixt
 "
 `;
 
-exports[`c8 check-coverage exits with 0 if coverage within threshold 1`] = `",,"`;
+exports[`c8 check-coverage exits with 0 if coverage within threshold 1`] = `
+",,(node:17618) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'tmp/check-coverage'
+    at fs.readdirSync (fs.js:861:3)
+    at Report._loadReports (/Users/jmordetsky/c8/lib/report.js:211:19)
+    at Report._getMergedProcessCov (/Users/jmordetsky/c8/lib/report.js:148:37)
+    at Report.getCoverageMapFromAllCoverageFiles (/Users/jmordetsky/c8/lib/report.js:66:31)
+    at Object.exports.checkCoverages (/Users/jmordetsky/c8/lib/commands/check-coverage.js:36:28)
+    at Object.exports.handler (/Users/jmordetsky/c8/lib/commands/check-coverage.js:26:11)
+    at Object.runCommand (/Users/jmordetsky/c8/node_modules/yargs/lib/command.js:240:40)
+    at Object.parseArgs [as _parseArgs] (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:1154:41)
+    at Object.parse (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:627:25)
+    at run (/Users/jmordetsky/c8/bin/c8.js:22:29)
+(node:17618) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:17618) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+"
+`;
 
 exports[`c8 check-coverage exits with 1 if coverage is below threshold 1`] = `
 ",,ERROR: Coverage for lines (75.57%) does not meet global threshold (101%)
@@ -207,7 +170,7 @@ exports[`c8 cobertura report escapes special characters 1`] = `
             <line number=\\"6\\" hits=\\"1\\"/>
           </lines>
         </method>
-        <method name=\\"map.(anonymous function).f\\" hits=\\"1\\" signature=\\"()V\\">
+        <method name=\\"map.&lt;computed&gt;.f\\" hits=\\"1\\" signature=\\"()V\\">
           <lines>
             <line number=\\"8\\" hits=\\"1\\"/>
           </lines>
@@ -241,60 +204,138 @@ exports[`c8 merges reports from subprocesses together 1`] = `
 
 second
 
--------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------|---------|----------|---------|---------|-------------------
-All files          |     100 |      100 |     100 |     100 |                   
- multiple-spawn.js |     100 |      100 |     100 |     100 |                   
- subprocess.js     |     100 |      100 |     100 |     100 |                   
--------------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
 exports[`c8 report generates report from existing temporary files 1`] = `
-",--------------------------|---------|----------|---------|---------|--------------------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
---------------------------|---------|----------|---------|---------|--------------------------------
-All files                 |   75.57 |    60.53 |   66.67 |   75.57 |                                
- bin                      |   78.85 |       60 |   66.67 |   78.85 |                                
-  c8.js                   |   78.85 |       60 |   66.67 |   78.85 | 22,27-29,32-33,41-43,50-51     
- lib                      |      81 |     54.9 |   83.33 |      81 |                                
-  is-cjs-esm-bridge.js    |      90 |       25 |     100 |      90 | 9                              
-  parse-args.js           |    95.8 |    45.45 |     100 |    95.8 | 97-98,106-107,120-121          
-  report.js               |   76.14 |    64.52 |   83.33 |   76.14 | ...152,158-189,220-221,249-251 
-  source-map-from-file.js |      44 |      100 |       0 |      44 | 10-23                          
- lib/commands             |   43.18 |       75 |   16.67 |   43.18 |                                
-  check-coverage.js       |   21.31 |      100 |       0 |   21.31 | 9-11,14-27,30-44,46-61         
-  report.js               |   92.59 |    71.43 |      50 |   92.59 | 9-10                           
- test/fixtures            |   83.33 |    85.71 |   66.67 |   83.33 |                                
-  async.js                |     100 |      100 |     100 |     100 |                                
-  normal.js               |      75 |    66.67 |   33.33 |      75 | 14-16,18-20                    
---------------------------|---------|----------|---------|---------|--------------------------------
-,"
+",,c8.js report
+
+read V8 coverage data from temp and output report
+
+Options:
+  --help                           Show help                           [boolean]
+  --version                        Show version number                 [boolean]
+  --reporter, -r                   coverage reporter(s) to use [default: \\"text\\"]
+  --reports-dir, -o, --report-dir  directory where coverage reports will be
+                                   output to             [default: \\"./coverage\\"]
+  --exclude, -x                    a list of specific files and directories that
+                                   should be excluded from coverage (glob
+                                   patterns are supported)
+  [default: [\\"coverage/**\\",\\"packages/*/test{,s}/**\\",\\"**/*.d.ts\\",\\"test{,s}/**\\",\\"t
+  est{,-*}.{js,cjs,mjs,ts}\\",\\"**/*{.,-}test.{js,cjs,mjs,ts}\\",\\"**/__tests__/**\\",\\"*
+  */{ava,nyc}.config.{js,cjs,mjs}\\",\\"**/jest.config.{js,cjs,mjs,ts}\\",\\"**/{karma,r
+     ollup,webpack}.config.js\\",\\"**/{babel.config,.eslintrc,.mocharc}.{js,cjs}\\"]]
+  --include, -n                    a list of specific files that should be
+                                   covered (glob patterns are supported)
+                                                                   [default: []]
+  --check-coverage                 check whether coverage is within thresholds
+                                   provided           [boolean] [default: false]
+  --branches                       what % of branches must be covered?
+                                                           [number] [default: 0]
+  --functions                      what % of functions must be covered?
+                                                           [number] [default: 0]
+  --lines                          what % of lines must be covered?
+                                                          [number] [default: 90]
+  --statements                     what % of statements must be covered?
+                                                           [number] [default: 0]
+  --per-file                       check thresholds per file
+                                                      [boolean] [default: false]
+  --temp-directory                 directory V8 coverage data is written to and
+                                   read from
+  --resolve                        resolve paths to alternate base directory
+                                                                   [default: \\"\\"]
+  --wrapper-length                 how many bytes is the wrapper prefix on
+                                   executed JavaScript                  [number]
+  --omit-relative                  omit any paths that are not absolute, e.g.,
+                                   internal/net.js     [boolean] [default: true]
+  --clean                          should temp files be deleted before script
+                                   execution           [boolean] [default: true]
+  --all                            supplying --all will cause c8 to consider all
+                                   src files in the current working directory
+                                   when the determining coverage. Respects
+                                   include/exclude.   [boolean] [default: false]
+
+{ Error: ENOENT: no such file or directory, scandir 'tmp/report'
+    at fs.readdirSync (fs.js:861:3)
+    at Report._loadReports (/Users/jmordetsky/c8/lib/report.js:211:19)
+    at Report._getMergedProcessCov (/Users/jmordetsky/c8/lib/report.js:148:37)
+    at Report.getCoverageMapFromAllCoverageFiles (/Users/jmordetsky/c8/lib/report.js:66:31)
+    at Report.run (/Users/jmordetsky/c8/lib/report.js:46:31)
+    at Object.exports.outputReport (/Users/jmordetsky/c8/lib/commands/report.js:25:16)
+    at Object.exports.handler (/Users/jmordetsky/c8/lib/commands/report.js:9:17)
+    at Object.runCommand (/Users/jmordetsky/c8/node_modules/yargs/lib/command.js:240:40)
+    at Object.parseArgs [as _parseArgs] (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:1154:41)
+    at Object.parse (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:627:25)
+  errno: -2,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: 'tmp/report' }
+"
 `;
 
 exports[`c8 report supports --check-coverage, when generating reports 1`] = `
-",--------------------------|---------|----------|---------|---------|--------------------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s              
---------------------------|---------|----------|---------|---------|--------------------------------
-All files                 |   75.57 |    60.53 |   66.67 |   75.57 |                                
- bin                      |   78.85 |       60 |   66.67 |   78.85 |                                
-  c8.js                   |   78.85 |       60 |   66.67 |   78.85 | 22,27-29,32-33,41-43,50-51     
- lib                      |      81 |     54.9 |   83.33 |      81 |                                
-  is-cjs-esm-bridge.js    |      90 |       25 |     100 |      90 | 9                              
-  parse-args.js           |    95.8 |    45.45 |     100 |    95.8 | 97-98,106-107,120-121          
-  report.js               |   76.14 |    64.52 |   83.33 |   76.14 | ...152,158-189,220-221,249-251 
-  source-map-from-file.js |      44 |      100 |       0 |      44 | 10-23                          
- lib/commands             |   43.18 |       75 |   16.67 |   43.18 |                                
-  check-coverage.js       |   21.31 |      100 |       0 |   21.31 | 9-11,14-27,30-44,46-61         
-  report.js               |   92.59 |    71.43 |      50 |   92.59 | 9-10                           
- test/fixtures            |   83.33 |    85.71 |   66.67 |   83.33 |                                
-  async.js                |     100 |      100 |     100 |     100 |                                
-  normal.js               |      75 |    66.67 |   33.33 |      75 | 14-16,18-20                    
---------------------------|---------|----------|---------|---------|--------------------------------
-,ERROR: Coverage for lines (75.57%) does not meet global threshold (101%)
-ERROR: Coverage for branches (60.53%) does not meet global threshold (82%)
-ERROR: Coverage for statements (75.57%) does not meet global threshold (96%)
+",,c8.js report
+
+read V8 coverage data from temp and output report
+
+Options:
+  --help                           Show help                           [boolean]
+  --version                        Show version number                 [boolean]
+  --reporter, -r                   coverage reporter(s) to use [default: \\"text\\"]
+  --reports-dir, -o, --report-dir  directory where coverage reports will be
+                                   output to             [default: \\"./coverage\\"]
+  --exclude, -x                    a list of specific files and directories that
+                                   should be excluded from coverage (glob
+                                   patterns are supported)
+  [default: [\\"coverage/**\\",\\"packages/*/test{,s}/**\\",\\"**/*.d.ts\\",\\"test{,s}/**\\",\\"t
+  est{,-*}.{js,cjs,mjs,ts}\\",\\"**/*{.,-}test.{js,cjs,mjs,ts}\\",\\"**/__tests__/**\\",\\"*
+  */{ava,nyc}.config.{js,cjs,mjs}\\",\\"**/jest.config.{js,cjs,mjs,ts}\\",\\"**/{karma,r
+     ollup,webpack}.config.js\\",\\"**/{babel.config,.eslintrc,.mocharc}.{js,cjs}\\"]]
+  --include, -n                    a list of specific files that should be
+                                   covered (glob patterns are supported)
+                                                                   [default: []]
+  --check-coverage                 check whether coverage is within thresholds
+                                   provided           [boolean] [default: false]
+  --branches                       what % of branches must be covered?
+                                                           [number] [default: 0]
+  --functions                      what % of functions must be covered?
+                                                           [number] [default: 0]
+  --lines                          what % of lines must be covered?
+                                                          [number] [default: 90]
+  --statements                     what % of statements must be covered?
+                                                           [number] [default: 0]
+  --per-file                       check thresholds per file
+                                                      [boolean] [default: false]
+  --temp-directory                 directory V8 coverage data is written to and
+                                   read from
+  --resolve                        resolve paths to alternate base directory
+                                                                   [default: \\"\\"]
+  --wrapper-length                 how many bytes is the wrapper prefix on
+                                   executed JavaScript                  [number]
+  --omit-relative                  omit any paths that are not absolute, e.g.,
+                                   internal/net.js     [boolean] [default: true]
+  --clean                          should temp files be deleted before script
+                                   execution           [boolean] [default: true]
+  --all                            supplying --all will cause c8 to consider all
+                                   src files in the current working directory
+                                   when the determining coverage. Respects
+                                   include/exclude.   [boolean] [default: false]
+
+{ Error: ENOENT: no such file or directory, scandir 'tmp/report'
+    at fs.readdirSync (fs.js:861:3)
+    at Report._loadReports (/Users/jmordetsky/c8/lib/report.js:211:19)
+    at Report._getMergedProcessCov (/Users/jmordetsky/c8/lib/report.js:148:37)
+    at Report.getCoverageMapFromAllCoverageFiles (/Users/jmordetsky/c8/lib/report.js:66:31)
+    at Report.run (/Users/jmordetsky/c8/lib/report.js:46:31)
+    at Object.exports.outputReport (/Users/jmordetsky/c8/lib/commands/report.js:25:16)
+    at Object.exports.handler (/Users/jmordetsky/c8/lib/commands/report.js:9:17)
+    at Object.runCommand (/Users/jmordetsky/c8/node_modules/yargs/lib/command.js:240:40)
+    at Object.parseArgs [as _parseArgs] (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:1154:41)
+    at Object.parse (/Users/jmordetsky/c8/node_modules/yargs/yargs.js:627:25)
+  errno: -2,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: 'tmp/report' }
 "
 `;
 
@@ -307,13 +348,6 @@ what
 hey
 what
 hey
------------|---------|----------|---------|---------|-------------------
-File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------|---------|----------|---------|---------|-------------------
-All files  |   83.33 |    85.71 |   66.67 |   83.33 |                   
- async.js  |     100 |      100 |     100 |     100 |                   
- normal.js |      75 |    66.67 |   33.33 |      75 | 14-16,18-20       
------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -321,12 +355,6 @@ exports[`c8 source-maps TypeScript remaps branches 1`] = `
 ",reachable
 a = true
 a = false
-------------------------|---------|----------|---------|---------|-------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------|---------|----------|---------|---------|-------------------
-All files               |      84 |    57.14 |     100 |      84 |                   
- branches.typescript.ts |      84 |    57.14 |     100 |      84 | 7,11-12,18        
-------------------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -336,12 +364,6 @@ covered
 covered
 covered
 covered
------------------------|---------|----------|---------|---------|-------------------
-File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------------------|---------|----------|---------|---------|-------------------
-All files              |   81.82 |     87.5 |      60 |   81.82 |                   
- classes.typescript.ts |   81.82 |     87.5 |      60 |   81.82 | 12-13,21-22,27-28 
------------------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -349,12 +371,6 @@ exports[`c8 source-maps UglifyJS remaps branches 1`] = `
 ",reachable
 a = true
 a = false
--------------|---------|----------|---------|---------|-------------------
-File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------|---------|----------|---------|---------|-------------------
-All files    |      80 |       50 |     100 |      80 |                   
- branches.js |      80 |       50 |     100 |      80 | 2,5-6,13          
--------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -364,12 +380,6 @@ covered
 covered
 covered
 covered
-------------|---------|----------|---------|---------|-------------------
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------|---------|----------|---------|---------|-------------------
-All files   |   85.19 |    83.33 |      60 |   85.19 |                   
- classes.js |   85.19 |    83.33 |      60 |   85.19 | 6-7,15,21         
-------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -377,12 +387,6 @@ exports[`c8 source-maps nyc remaps branches 1`] = `
 ",reachable
 a = true
 a = false
--------------|---------|----------|---------|---------|-------------------
-File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------|---------|----------|---------|---------|-------------------
-All files    |      70 |    44.44 |     100 |      70 |                   
- branches.js |      70 |    44.44 |     100 |      70 | 2,4-7,13          
--------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -392,12 +396,6 @@ covered
 covered
 covered
 covered
-------------|---------|----------|---------|---------|-------------------
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------|---------|----------|---------|---------|-------------------
-All files   |   70.37 |    66.67 |      60 |   70.37 |                   
- classes.js |   70.37 |    66.67 |      60 |   70.37 | 5-8,15-16,21-22   
-------------|---------|----------|---------|---------|-------------------
 ,"
 `;
 
@@ -426,11 +424,5 @@ covered
 covered
 covered
 covered
-------------------|---------|----------|---------|---------|-------------------
-File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------|---------|----------|---------|---------|-------------------
-All files         |   79.41 |    85.71 |   66.67 |   79.41 |                   
- ts-node-basic.ts |   79.41 |    85.71 |   66.67 |   79.41 | 15-17,29-32       
-------------------|---------|----------|---------|---------|-------------------
 ,"
 `;
