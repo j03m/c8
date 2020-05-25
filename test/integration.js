@@ -412,7 +412,7 @@ describe('c8', () => {
         '--temp-directory=tmp/all-ts',
         '--clean=false',
         '--all=true',
-        '--include=test/fixtures/all/ts-compiled/**/*.js',
+        '--include=test/fixtures/all/ts-compiled/**/*.ts',
         '--exclude="test/*.js"', // add an exclude to avoid default excludes of test/**
         nodePath,
         require.resolve('./fixtures/all/ts-compiled/main.js')
